@@ -69,14 +69,73 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 | RF03 | Pesquisa detalhada  | O sistema permite buscar através da combinação de filtro de dados o cliente desejado.
 | RF04 | Gerenciar usuários | O sistema realiza o gerenciamento de permissões dos usuários. 
 
-##### 5.2Requisitos Não Funcionais 
+##### 5.2 Requisitos Não Funcionais
 
 | Cod | Nome | Descrição |
 | ------ | ------ | ------ |
-| NF01 | Tecnologias utilizadas | O sistema deve ser desenvolvido com a linguagem Python, usando o framework Django rest para a api e React Desktop para o front. 
-| NF02 | Facilidade de Uso | Interface simples e fácil de usar. 
-| NF03 | Facilidade de Aprendizagem |Requer tempo e esforço mínimo para alcançar desempenho no uso do sistema. 
-| NF04 | Banco de dados | O sistema deve armazenar e manipular dados através de um Banco de Dados MYSQL. 
+| NF01 | Desempenho | O sistema deve responder em menos de 2 segundos. |
+| NF02 | Usabilidade | Interface intuitiva e fácil de usar. |
+| NF03 | Segurança | Autenticação e autorização para acessar chamados. |
+| NF04 | Escalabilidade | Suporte a 100 usuários simultâneos. |
+| NF05 | Compatibilidade | Suporte a navegadores modernos e dispositivos móveis. |
+| NF06 | Facilidade de Manutenção | Documentação clara e atualizada. |
+| NF07 | Recuperabilidade | Backup automático diário. |
+| NF08 | Confiabilidade | Disponibilidade de 99,9%. |
+
+##### 5.3 Requisitos de Qualidade
+
+###### RF01 - Gerenciar Chamados
+
+| Item | Descrição |
+| ------ | ------ |
+| Identificação | RF01 |
+| Objetivo | Tempo de resposta rápido |
+| Escala | Tempo decorrido em segundos |
+| Métrica | Medir tempo entre ação e confirmação |
+| Mínimo | Menos de 2s para 90% dos casos |
+| Intervalo OK | Entre 1-2s para 95% dos casos |
+| Ótimo | Menos de 1s para 99% dos casos |
+| Prioridade | Alta |
+
+######  RF02 - Gerenciar Clientes
+
+| Item | Descrição |
+| ------ | ------ |
+| Identificação | RF02 |
+| Objetivo | Eficiência na busca de clientes |
+| Escala | Tempo de busca |
+| Métrica | Medir tempo entre busca e resultado |
+| Mínimo | Menos de 1,5s para 90% dos casos |
+| Intervalo OK | Entre 1-1,5s para 95% dos casos |
+| Ótimo | Menos de 1s para 99% dos casos |
+| Prioridade | Alta |
+
+###### RF03 - Pesquisa Detalhada
+
+| Item | Descrição |
+| ------ | ------ |
+| Identificação | RF03 |
+| Objetivo | Precisão na pesquisa |
+| Escala | Taxa de resultados relevantes |
+| Métrica | Medir precisão dos resultados |
+| Mínimo | 90% de precisão |
+| Intervalo OK | Entre 90-95% |
+| Ótimo | 100% de precisão |
+| Prioridade | Média |
+
+###### RF04 - Gerenciar Usuários
+
+| Item | Descrição |
+| ------ | ------ |
+| Identificação | RF04 |
+| Objetivo | Segurança nas permissões |
+| Escala | Taxa de acessos autorizados |
+| Métrica | Medir acessos autorizados vs. não autorizados |
+| Mínimo | 99% de acessos autorizados |
+| Intervalo OK | Entre 99-100% |
+| Ótimo | 100% de acessos autorizados |
+| Prioridade | Alta |
+
 
 ## 6 Regras de Negócio 
 
