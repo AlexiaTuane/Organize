@@ -4,7 +4,7 @@
 ## 1 Introdução 
 
 ##### 1.1 Sumário executivo 
-O Organize, é uma ferramenta desktop que, durante a primeira etapa, será capaz de  
+O Organize, é uma ferramenta web que, durante a primeira etapa, será capaz de  
 otimizar a gestão de chamados de clientes, proporcionando uma experiência eficiente e personalizada para empresas.
 
 ##### 1.2 Escopo 
@@ -31,7 +31,7 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 ## 2 Problema
 
 ##### 2.1 Dispersão 
-- Os dados estão armazenados de forma dispersa, em diferentes documentos, o que tem imposto uma lentidão no gerenciamento, atualização e consulta desses chamados. 
+- Os dados  armazenados de forma dispersa  em diferentes documentos produz lentidão ao gerenciamento, atualização e consulta desses chamados. 
 
 ## 3 Cliente 
 
@@ -47,15 +47,14 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 - Editar informações de clientes;
 - Gerenciar chamados prioritários;
 - Atribuir chamados à equipe.
-- Visualizar relatórios de desempenho por usuário;
-- Analisar métricas de eficiência;
-- Tomar decisões estratégicas.
+- Gerencia a agenda
 
 ##### 4.4 Suporte Nível 1 (EMPRESA FICTICIA). 
 
-- Alterar dados específicos do chamados (objetivo, status, cliente, etc.);
-- Preencher campos obrigatórios;
+- Alterar dados específicos do chamados (observações, status etc.);
 - Anexar documentos relevantes.
+- Gerencia a agenda
+- Consultar 
 
 
 ## 5 Requisitos 
@@ -68,6 +67,8 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 | RF02 | Gerenciar Cliente | O sistema realiza o cadastro, alteração e exclusão de clientes. 
 | RF03 | Pesquisa detalhada  | O sistema permite buscar através da combinação de filtro de dados o cliente desejado.
 | RF04 | Gerenciar usuários | O sistema realiza o gerenciamento de permissões dos usuários. 
+| RF05 | Notificações | O sistema deve enviar notificações para os usuários (como supervisores ou suporte) sobre chamados pendentes, atrasados ou atualizações importantes.
+| RF06 | Registro de Histórico | O sistema deve armazenar um histórico de alterações realizadas em chamados, incluindo a identificação do usuário e a data/hora.
 
 ##### 5.2 Requisitos Não Funcionais
 
@@ -136,6 +137,23 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 | Ótimo | 100% de acessos autorizados |
 | Prioridade | Alta |
 
+###### RF05 - Notificações
+
+| Item | Descrição |
+| ------ | ------ |
+| Identificação | RF05 |
+| Objetivo | Garantir entrega das notificações |
+| Escala | Taxa de notificações enviadas com sucesso. 
+| Mínimo | 95% das notificações devem ser entregues em até 1 minuto. |
+| Ótimo | 100% entregues em até 30 segundos. |
+| Prioridade | Baixa |
+
+
+
+
+
+
+
 
 ## 6 Regras de Negócio 
 
@@ -144,3 +162,5 @@ otimizar a gestão de chamados de clientes, proporcionando uma experiência efic
 | RN01 | Permissões de alteração | Para realizar modificações no sistema o usuário precisa estar cadastrado e possuir as permissões de alteração, conforme o(s) perfil(is) de usuário a ele atribuído(s). 
 | RN02 | Tipo definido de status | Os chamados só podem ser cadastrados se possuir um tipo ( manutenção, suporte, agendamento) definido.
 | RN03 | Condições de Cadastro de Chamados | Os processos só podem ser cadastrados se possuírem um cliente vinculado ao cadastro do chamado.
+| RN04 | Requisitos de Agendamento | Um agendamento só pode ser realizado se possuir título, descrição e cliente vinculados.
+| RN05 |  Restrição de Exclusão de Chamado | Apenas usuários com permissões específicas (como supervisores) podem excluir chamados.
