@@ -1,4 +1,4 @@
-##### RASTREABILIDADE DOS REQUISITOS
+##### TABELA DOS REQUISITOS
 
 | Identificação | Versão | Nome | Tipo | Origem | Dificuldade |
 |---------------|--------|----------------------|-----------|----------|-------------|
